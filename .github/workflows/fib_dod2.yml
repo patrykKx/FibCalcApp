@@ -51,11 +51,11 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          cache-from: type=registry,ref=docker.io/patrykkazmierak/fibcalc:cache1,mode=max
-          cache-to: type=registry,ref=docker.io/patrykkazmierak/fibcalc:cache1,mode=max
+          cache-from: type=registry,src=/tmp/.buildx-cache
+          cache-to: type=registry,ref=localhost:5000/fibcalc:cache
           platforms: linux/amd64,linux/arm64/v8
           context: .
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/patrykkx/fibcalc:1.0.0
+            ghcr.io/patrykkx/fibcalc:1.0.0-beta
