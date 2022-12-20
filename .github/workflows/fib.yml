@@ -49,6 +49,10 @@ jobs:
       #Zbudowanie obrazu
       - name: Build and push
         id: docker_build
+        env:
+          REGISTRY: ghcr.io
+          OWNER: patrykKx
+          IMAGE_NAME: ${{ github.repository }}
         uses: docker/build-push-action@v2
         with:
           cache-from: type=registry,src=/tmp/.buildx-cache
