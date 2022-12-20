@@ -58,7 +58,7 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/patrykKx/fibcalccache:1.0.0
+            ghcr.io/patrykkx/fibcalccache:1.0.0
       
       #Przenies cache'a
       - name: Move cache
