@@ -58,7 +58,7 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            $REGISTRY/$OWNER/$IMAGE_NAME:cache
+            $REGISTRY/$OWNER/$IMAGE_NAME:1.0.0
       
       #Przenies cache'a
       - name: Move cache
